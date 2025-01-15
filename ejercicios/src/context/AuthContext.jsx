@@ -1,6 +1,7 @@
+/* eslint-disable react-refresh/only-export-components */
 /* eslint-disable react/prop-types */
 
-// context del usuario para poder acceder desde cualquier punto de la aplicacion. Corresponde a la consigna: crear un context para manejar la autenticacion en un app.
+// Aca creo el "context" del usuario para poder acceder desde cualquier punto de la aplicacion. Corresponde a la consigna: crear un context para manejar la autenticacion en un app.
 import { createContext, useContext, useState } from "react";
 
 //creo un usuario(como si fuera una base de datos)para poder darle acceso . simulasionde usuario
@@ -26,7 +27,7 @@ export const AuthProvider = ({ children }) => {
   };
 
   const logout = () => {
-    setUser(null)// si cierro sesion no tengo mas usuario por esovuelve a null
+    setUser(null)// si cierro sesion no tengo mas usuario por eso vuelve a null
   };
 
   return (
@@ -34,5 +35,6 @@ export const AuthProvider = ({ children }) => {
   ); /* el value es el objeto que retorno lo que tiene adentro , lo que necesito "usar en otro lado", por eso devuelvo el estado(useState), los errores, el inicio y el cierre de sesion(login, logout)*/
 };
 
- {/*creo un hook personalizado "useAuth". exporto el hook */}
-export const useAuth= () => useContext(AuthContext) 
+ {/*creo un Hooks personalizado:"useAuth". exporto el hook.  crea un hook personalizado llamado useAuth que, al ser llamado, devuelve el valor del AuthContext. Esto se utiliza para acceder a la información de autenticación (como el usuario actual) en cualquier parte de tu aplicación React donde se use este hook. */}
+
+export const useAuth= () => useContext(AuthContext)  //exporto el Custom Hooks (useAuth)
