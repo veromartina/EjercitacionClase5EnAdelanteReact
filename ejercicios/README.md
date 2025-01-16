@@ -1,8 +1,3 @@
-# React + Vite
+// Crea un contexto para manejar la autenticación en una aplicación. // El contexto debe tener un estado para el usuario autenticado. // un método para iniciar sesión // otro método para cerrar sesión.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+El form validado con react hook form
