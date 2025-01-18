@@ -1,3 +1,5 @@
+
+/* EJERCICIO REALIZADO EN CLASE */
 import { useState, useEffect } from "react";
 import axios from "axios";
 
@@ -6,22 +8,26 @@ export const useFetch = (url) => {
   const [isLoading, setIsLoading] = useState(true); // Estado de carga
   const [error, setError] = useState(null); // Estado de error
 
+
+  //se crea una funcion asincrona para poder hacer la peticion(la data no esta en el momento)
   useEffect(() => {
     const fetchData = async () => {
+      //
       try {
+        //por ser asincrona se usa el try
         const response = await axios.get(url); // Petición GET con Axios
         setData(response.data); // Guardar los datos en el estado
-        setIsLoading(false); // Terminar el estado de carga
+        setIsLoading(false); // Terminar el estado de carga. cambio el estado
       } catch (err) {
-        setError(err); // Guardar el error si ocurre
+        setError(err); //Captura el error para q lo guarde si ocurre.
         setIsLoading(false);
       } finally {
-        setIsLoading(false); // Asegurarse de que la carga termine
+        setIsLoading(false); // Asegurarse de que la carga termine,sino tengo error.
       }
     };
 
-    fetchData();
-  }, [url]); // Ejecutar el efecto cuando la URL cambie
+    fetchData(); //ejecuto la funcion para que me haga la peticion
+  }, [url]); //cuando cambie la url va a tener que ejecurase(cambiar)
 
-  return { data, error, isLoading }; // Retornar el estado y datos
-};
+  return { data, error, isLoading }; // Retornar el estado y datos. no hay funciones pero si estados
+}; 
