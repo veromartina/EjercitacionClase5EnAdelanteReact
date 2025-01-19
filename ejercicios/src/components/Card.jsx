@@ -5,7 +5,7 @@
 import { useFetch } from "../hooks/useFetch";
 import { Alert, AlertIcon, Box, Button, Image, Spinner, Stack, Text } from "@chakra-ui/react"
 
-const List = () => {
+const Card = () => {
 
   const { data, isLoading, error } = useFetch("https://randomfox.ca/floof/");
 
@@ -51,4 +51,4 @@ onClick={()=>window.location.reload()}
   )
 }
 
-export default List
+export default Card

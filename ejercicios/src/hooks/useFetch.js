@@ -27,7 +27,7 @@ export const useFetch = (url) => {
     };
 
     fetchData(); //ejecuto la funcion para que me haga la peticion
-  }, [url]); //cuando cambie la url va a tener que ejecurase(cambiar)
+  }, [url]); //cuando cambie la url va a tener que ejecutarse(cambiar)
 
   return { data, error, isLoading }; // Retornar el estado y datos. no hay funciones pero si estados
 }; 
