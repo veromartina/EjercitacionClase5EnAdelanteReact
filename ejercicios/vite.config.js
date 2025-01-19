@@ -8,7 +8,7 @@ export default defineConfig({
   resolve: {
     alias: {
       com: '/src/components',
-      s: ‘/src/’,
+      
     },
   },
  
