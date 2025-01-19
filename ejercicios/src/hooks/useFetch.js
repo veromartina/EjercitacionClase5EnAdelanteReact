@@ -30,3 +30,4 @@ export const useFetch = (url) => {
 
   return { data, error, isLoading }; // Retornar el estado y datos. no hay funciones pero si estados
 }; 
+
