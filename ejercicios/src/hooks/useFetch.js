@@ -1,5 +1,4 @@
 
-/* EJERCICIO REALIZADO EN CLASE */
 import { useState, useEffect } from "react";
 import axios from "axios";
 
