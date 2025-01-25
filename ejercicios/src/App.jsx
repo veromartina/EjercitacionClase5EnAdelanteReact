@@ -2,10 +2,10 @@
 import './App.css'
 import { VStack } from '@chakra-ui/react'
 //import { Form } from './componets/Form'
-import { LoginForm } from './pages/LoginForm'
+import { LoginForm } from './componets/LoginForm'
 import { Register } from './pages/Register'
 import { Route, Routes } from "react-router-dom"
-import Header from './pages/Header'
+import Header from './layout/Header'
 import Home from './pages/Home'
 
 function App() {
