@@ -5,15 +5,15 @@ import { VStack } from '@chakra-ui/react'
 import { LoginForm } from './componets/LoginForm'
 import { Register } from './pages/Register'
 import { Route, Routes } from "react-router-dom"
-import Header from './layout/Header'
 import Home from './pages/Home'
+import { Header1 } from './layout/Header1'
 
 function App() {
  
   return (
     
       <VStack>  {/*siempre va a tener un contenedor  */}
-    <Header/>
+    <Header1/>
         <Routes> {/*genero un arbol de ruta */}
           {/* la barra sola me lleva al inicio(muestra el inicio), el element me indica la ruta */}
           <Route path="/" element={<Home/>} />  
