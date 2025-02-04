@@ -1,19 +1,12 @@
+import { createRoot } from "react-dom/client";
+import App from "./App.jsx";
+import { ChakraProvider } from "@chakra-ui/react";
+import { BrowserRouter } from "react-router-dom";
 
-import { createRoot } from 'react-dom/client'
-import './index.css'
-import App from './App.jsx'
-import { BrowserRouter } from "react-router-dom"
-import { ChakraProvider } from '@chakra-ui/react';
-import { AuthProvider } from './context/AuthContext.jsx';
-
-
-createRoot(document.getElementById('root')).render(
-<BrowserRouter> 
-<ChakraProvider>
-  <AuthProvider>
-    <App />
-    </AuthProvider>
+createRoot(document.getElementById("root")).render(
+ <BrowserRouter> 
+    <ChakraProvider>
+        <App />
     </ChakraProvider>
-    </BrowserRouter> //engloba toda la app porque es lo que nos permite navegar entre rutas 
-  
+  </BrowserRouter>
 );

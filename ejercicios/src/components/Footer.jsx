@@ -1,12 +1,12 @@
 // eslint-disable-next-line no-unused-vars
 import React from 'react'
 
-const Home = () => {
+const Footer = () => {
   return (
     <div>
-        home
+      Footer
     </div>
   )
 }
 
-export default Home
+export default Footer
