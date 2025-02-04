@@ -6,7 +6,7 @@ import Products from "./pages/Products";
 
 import NotFound from "./pages/NotFound";
 //import MockapiFetch from "./pages/MockapiFetch";
-import ProductDetails from "./components/ProductDetails";
+import ProductDetails from "./componets/ProductDetails";
 const Routes = () => {
   return (
     <RoutesReact>

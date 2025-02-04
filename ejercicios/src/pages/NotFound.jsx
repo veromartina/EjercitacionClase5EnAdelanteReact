@@ -1,17 +1,14 @@
-/* eslint-disable no-undef */
 import { Button } from '@chakra-ui/react'
-// eslint-disable-next-line no-unused-vars
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link, replace, useNavigate } from 'react-router-dom'
 
-// const NoExiste
 const NotFound = () => {
-
+  const navigate = useNavigate();
   return (
     <div>
        No existe la ruta error 404
-       <Button colorScheme='pink' as={Link} to="/" >Ir a home</Button>  {/*uso "button" de chackra con propiedades del "Link" del "Dom", para que funcione como un link que me lleva al "home" */}
-    </div> 
+       <Button colorScheme='pink' onClick={()=> navigate(-1, replace)}>Atrás</Button>
+    </div>
   )
 }
 

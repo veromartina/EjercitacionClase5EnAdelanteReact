@@ -1,4 +1,3 @@
-/* eslint-disable react/prop-types */
 import { Card as CardChakra, CardBody, CardFooter, Divider, Heading, Image, Stack, Text, ButtonGroup, Button } from '@chakra-ui/react'
 // eslint-disable-next-line no-unused-vars
 import React from 'react'

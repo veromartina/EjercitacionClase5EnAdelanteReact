@@ -1,11 +1,11 @@
 import { Grid, GridItem } from "@chakra-ui/react";
-import Footer from "../components/Footer";
-import Header from "../components/Header";
+import Footer from "../componets/Footer";
+import Header from "../componets/Header";
 
 
 import Routes from "../Routes";
 
-import ScrollToTop from '../components/ScrollToTop'
+import ScrollToTop from '../componets/ScrollToTop'
 const AppLayout = () => {
   return (
     <Grid
@@ -19,7 +19,7 @@ const AppLayout = () => {
     >
       <Header />
 
-      <GridItem pl="2" bg="green.200" area={"main"}>
+      <GridItem pl="2" bg="green.300" area={"main"}>
       <ScrollToTop />
         
         <Routes />

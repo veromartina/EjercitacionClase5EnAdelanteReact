@@ -1,7 +1,6 @@
 import {  Grid } from '@chakra-ui/react'
-// eslint-disable-next-line no-unused-vars
 import React from 'react'
-import Card from '../components/Card'
+import Card from '../componets/Card'
 import { products } from '../utils/products'
 import { useLocation } from 'react-router-dom'
 
@@ -25,24 +24,15 @@ return (
       <Card key={product.id} product={product} />
     ))}
   </Grid>
-);
-};
-
-export default Products
-
-
-
-  /*  Sin responsive
+  /* sin adapatar a las pantallas
   return (
-  
     <Grid templateColumns='repeat(3, 1fr)' gap={6}>
    {products.map((product)=><Card key={product.id} product={product}/>)}
-  </Grid>  
+
+  </Grid>  */
   )
 }
-{/*repeat(3, 1fr): Esta es una función usada en CSS Grid Layout. Significa que estás creando 3 columnas (o filas, dependiendo del contexto) y cada una tiene un tamaño de 1fr.
-
-repeat(3, 1fr): Esta parte le dice al navegador que repita 3 veces el valor 1fr. fr es una unidad fraccionaria que se usa en CSS Grid. Un 1fr significa una fracción del espacio disponible. Por lo tanto, si tienes 3 columnas de 1fr cada una, estas tres columnas ocuparán el espacio de forma equitativa. con un gap(separacion) de 6 *
 
 export default Products
-*/
+
+
