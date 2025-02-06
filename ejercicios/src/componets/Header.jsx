@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-vars */
 import { Heading, HStack, Link, SimpleGrid } from "@chakra-ui/react";
 import React from "react";
 import { NavLink, Link as RouterLink } from "react-router-dom";
@@ -15,6 +14,9 @@ const Header = () => {
         <Link as={RouterLink} to="/">
           Home
         </Link>
+        <NavLink as={Link} to="/mockapi">
+          Products mockapi
+        </NavLink>
       </HStack>
     </SimpleGrid>
   );

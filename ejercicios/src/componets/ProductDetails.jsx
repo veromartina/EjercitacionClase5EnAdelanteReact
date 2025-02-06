@@ -8,10 +8,9 @@ import {
   Text,
   Button,
 } from "@chakra-ui/react";
-// eslint-disable-next-line no-unused-vars
 import React from "react";
 import { useNavigate, useParams } from "react-router-dom";
-import { products } from "../utils/products";
+//import { products } from "../utils/products";
 import { useMemo } from "react";
 
 const ProductDetails = () => {
@@ -19,7 +18,7 @@ const ProductDetails = () => {
   console.log(id);
   const navigate = useNavigate()
   
-const product = useMemo(()=> products.find((p) => +id === p.id),[id])  //optimisa el espacio en la memoria
+const product = useMemo(()=> products.find((p) => +id === p.id),[id])
 
   const {name, description,price}= product
   return (
