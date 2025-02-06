@@ -18,7 +18,7 @@ const ProductDetails = () => {
   console.log(id);
   const navigate = useNavigate()
   
-const product = useMemo(()=> products.find((p) => +id === p.id),[id])
+const product = useMemo(()=> product.find((p) => +id === p.id),[id])
 
   const {name, description,price}= product
   return (
