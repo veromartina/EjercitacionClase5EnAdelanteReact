@@ -1,3 +1,4 @@
+Ejercicio
 Crear una aplicación que simule una tienda utilizando React Router.
 Define las siguientes rutas principales usando Routes y Route:
 /: Página de inicio con un mensaje de bienvenida.
