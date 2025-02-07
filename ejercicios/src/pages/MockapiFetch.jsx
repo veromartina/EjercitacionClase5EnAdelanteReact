@@ -1,7 +1,7 @@
 import React from "react";
 import { useFetch } from "../hooks/useFetch";
 import { Grid, Stack, Heading } from "@chakra-ui/react"; 
-import Card from "../componets/Card"
+import Card from "../componets/Card";
 
 const MockapiFetch = () => {
   const { data, loading, error } = useFetch('https://678842182c874e66b7d4c8fb.mockapi.io/api/cintia/products');
@@ -13,12 +13,11 @@ const MockapiFetch = () => {
     <Stack>
       <Heading>Lista de productos Mockapi</Heading>
       <Grid templateColumns="repeat(3,1fr)" gap={6}>
-        { data?.map((product)=>(
-          <Card product={product}/>)
-        )}
+        {data?.map((product) => (
+          <Card key={product.id} product={product} />
+        ))}
       </Grid>
     </Stack>
-  
   );
 };
 

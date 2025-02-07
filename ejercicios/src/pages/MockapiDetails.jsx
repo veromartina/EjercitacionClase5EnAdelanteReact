@@ -1,5 +1,6 @@
 import React from "react";
 import { useFetch } from "../hooks/useFetch";
+import { useParams, useNavigate } from "react-router-dom"; //importar useParams y useNavigate
 import {
   Button,
   CardBody,
@@ -10,15 +11,17 @@ import {
   Stack,
   Text,
 } from "@chakra-ui/react";
-import { Navigate } from "react-router-dom";
+
 
 const MockapiDetails = () => {
+  const { id } = useParams();  // obtengo el id del producto desde la URL
   const { data, isLoading, error } = useFetch(
-    "https://678842182c874e66b7d4c8fb.mockapi.io/api/cintia/products"
+    `https://678842182c874e66b7d4c8fb.mockapi.io/api/cintia/products/${id}` // Llamar solo al producto con el id
   );
+  const navigate = useNavigate(); // Navegar hacia atrás
 
-  if (isLoading) return <p> Cargando...</p>; // Muestra un mensaje de carga
-  if (error) return <p>Error: {error}</p>; // Muestra un mensaje de error
+  if (isLoading) return <p> Cargando...</p>;
+  if (error) return <p>Error: {error}</p>;
 
   return (
     <CardChakra maxW="sm" m={5}>
@@ -29,12 +32,11 @@ const MockapiDetails = () => {
             <Heading size="md">{data.name}</Heading>
             <Text>{data.description}</Text>
             <Text color="blue.500" fontSize="2xl">
-              {" "}
               $ {data.price}
             </Text>
           </Stack>
-          <Button colorScheme="pink" onClick={() => Navigate(-1)}>
-            volver atras
+          <Button colorScheme="pink" onClick={() => navigate(-1)}>
+            Volver atrás
           </Button>
         </CardBody>
       )}
