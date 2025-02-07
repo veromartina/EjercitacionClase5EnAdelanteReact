@@ -10,7 +10,7 @@ const Header = () => {
       <HStack>
         <NavLink as={Link} to="products">
           Products
-        </NavLink>
+        </NavLink>  {/* no funciona porque quite archivo con el array de productos , tira error en pantalla */}
         <Link as={RouterLink} to="/">
           Home
         </Link>

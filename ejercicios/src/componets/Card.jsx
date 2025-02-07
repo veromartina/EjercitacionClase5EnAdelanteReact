@@ -3,7 +3,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 
 const Card = ({product}) => {
-  const { id, name, price,image} = product
+  const { id, name, price, image} = product
   return (
     <CardChakra maxW='sm'>
     <CardBody>
@@ -23,7 +23,7 @@ const Card = ({product}) => {
     <Divider />
     <CardFooter>
       <ButtonGroup spacing='2'>
-        <Button as={Link} to={`${id}`} variant='solid' colorScheme='blue'>
+          <Button as={Link} to={`${id}`} variant='solid' colorScheme='blue'>
          Ver más
         </Button>
         {/* <Button variant='ghost' colorScheme='blue'>

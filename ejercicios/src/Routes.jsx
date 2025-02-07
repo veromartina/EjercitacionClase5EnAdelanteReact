@@ -5,7 +5,7 @@ import Home from "./pages/Home";
 
 import NotFound from "./pages/Notfound";
 import MockapiFetch from "./pages/MockapiFetch";
-import ProductDetails from "./componets/ProductDetails";
+//import ProductDetails from "./componets/ProductDetails";
 import MockapiDetails from "./pages/MockapiDetails";
 
 
