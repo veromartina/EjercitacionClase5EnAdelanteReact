@@ -1,12 +1,13 @@
 import { Grid, GridItem } from "@chakra-ui/react";
 import Footer from "../componets/Footer";
 import Header from "../componets/Header";
-
-
+import { useNavigate } from "react-router-dom";
 import Routes from "../Routes";
-
+import React, { useEffect } from "react";
 import ScrollToTop from '../componets/ScrollToTop'
+
 const AppLayout = () => {
+  
   return (
     <Grid
       templateAreas={`"header"
