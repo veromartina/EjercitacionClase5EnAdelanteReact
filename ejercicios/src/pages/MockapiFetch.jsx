@@ -1,13 +1,18 @@
 import React from "react";
 import { useFetch } from "../hooks/useFetch";
-import { Grid, Stack, Heading } from "@chakra-ui/react"; 
+import { Grid, Stack, Heading, Spinner } from "@chakra-ui/react";
 import Card from "../componets/Card";
 
 const MockapiFetch = () => {
-  const { data, loading, error } = useFetch('https://678842182c874e66b7d4c8fb.mockapi.io/api/cintia/products');
+  const { data, isLoading, error } = useFetch('https://678842182c874e66b7d4c8fb.mockapi.io/api/cintia/products');
 
-  if (loading) return <p>Cargando...</p>;
-  if (error) return <p>Error: {error}</p>;
+  if (isLoading) return (
+    <Stack align="center" justify="center" minHeight="100vh">
+      <Spinner size="xl" />
+    </Stack>
+  );
+
+  if (error) return <p>Error: {error.message}</p>;
 
   return (
     <Stack>

@@ -1,6 +1,6 @@
 import React from "react";
 import { useFetch } from "../hooks/useFetch";
-import { useParams, useNavigate } from "react-router-dom"; //importar useParams y useNavigate
+import { useParams, useNavigate } from "react-router-dom";
 import {
   Button,
   CardBody,
@@ -10,8 +10,8 @@ import {
   Image,
   Stack,
   Text,
+  Spinner,  // Importar Spinner de Chakra UI
 } from "@chakra-ui/react";
-
 
 const MockapiDetails = () => {
   const { id } = useParams();  // obtengo el id del producto desde la URL
@@ -20,7 +20,12 @@ const MockapiDetails = () => {
   );
   const navigate = useNavigate(); // Navegar hacia atrás
 
-  if (isLoading) return <p> Cargando...</p>;
+  if (isLoading) return (
+    <Stack align="center" justify="center" minHeight="100vh">
+      <Spinner size="xl" />
+    </Stack>
+  );
+  
   if (error) return <p>Error: {error}</p>;
 
   return (
@@ -37,6 +42,9 @@ const MockapiDetails = () => {
           </Stack>
           <Button colorScheme="pink" onClick={() => navigate(-1)}>
             Volver atrás
+          </Button>
+          <Button variant="solid" colorScheme="blue" onClick={() => navigate('/')}>
+            Volver Home
           </Button>
         </CardBody>
       )}
