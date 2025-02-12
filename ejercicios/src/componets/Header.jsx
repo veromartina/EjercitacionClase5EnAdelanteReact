@@ -17,6 +17,18 @@ const Header = () => {
         <NavLink as={Link} to="/mockapi">
           Products mockapi
         </NavLink>
+        <Link as={RouterLink} to="/account">
+          Mi cuenta
+        </Link>
+        <Link as={RouterLink} to="/account/Cart">
+          Mis pedidos
+        </Link>
+        <Link as={RouterLink} to="/account/profile">
+         Mi perfil
+        </Link>
+        <NavLink as={Link} to="/login">
+         Login
+        </NavLink>
       </HStack>
     </SimpleGrid>
   );
