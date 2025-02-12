@@ -3,6 +3,7 @@ import { BrowserRouter as Router } from 'react-router-dom';
 import NavBar from './componets/NavBar';
 import AppRoutes from './Routes'; // Importa las rutas desde el archivo Routes.jsx
 
+
 function App() {
   return (
     <Router>
