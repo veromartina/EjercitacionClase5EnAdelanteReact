@@ -1,15 +1,27 @@
-import React from 'react';
-import { BrowserRouter as Router } from 'react-router-dom';
-import NavBar from './componets/NavBar';
-import AppRoutes from './Routes'; // Importa las rutas desde el archivo Routes.jsx
-
+import { Grid, GridItem } from "@chakra-ui/react";
+import Header from "./componets/Header";
+import Footer from "./componets/Footer";
+import Routes from "./routes/Routes";
 
 function App() {
   return (
-    <Router>
-      <NavBar />
-      <AppRoutes /> {/* Aquí se usan las rutas definidas en Routes.jsx */}
-    </Router>
+    <Grid
+      templateAreas={`"header"
+                  "main"
+                  "footer"`}
+      gridTemplateRows={"100px 1fr 70px"}
+      gap="1"
+      fontWeight="bold"
+      minHeight="100vh"
+    >
+      <Header/>
+
+      <GridItem pl="2" bg="green.300" area={"main"}>
+        
+        <Routes />
+      </GridItem>
+      <Footer />
+    </Grid>
   );
 }
 

@@ -1,24 +1,29 @@
-import React, { createContext, useContext, useState } from 'react';
+import { useContext } from "react";
+import { useState } from "react";
+import { createContext } from "react";
 
-// Contexto para manejar publicaciones
-const BlogContext = createContext();
-
-export const useBlog = () => useContext(BlogContext);
+export const BlogContext = createContext();
 
 export const BlogProvider = ({ children }) => {
-  const [posts, setPosts] = useState([]);
+  const [posts, setPosts] = useState([
+    {
+        id: 1,
+        title: "post 1",
+        description:"lorem ipsum",
+        autor: "cintia"
+    }, {
+        id: 2,
+        title: "post ",
+        description:"lorem ipsum",
+        autor: "Meli"
+    }
+  ]);
 
-  // Agregar una nueva publicación
-  const addPost = (newPost) => {
-    setPosts([...posts, newPost]);
-  };
+  const addPost = (newPost) =>{
+    setPosts(...posts, newPost)
+  }
 
-  // Buscar una publicación por ID
-  const getPostById = (id) => posts.find(post => post.id === id);
-
-  return (
-    <BlogContext.Provider value={{ posts, addPost, getPostById }}>
-      {children}
-    </BlogContext.Provider>
-  );
+  return <BlogContext.Provider value={{posts, addPost}}>{children}</BlogContext.Provider>;
 };
+
+export const useBlog = ()=> useContext(BlogContext)
