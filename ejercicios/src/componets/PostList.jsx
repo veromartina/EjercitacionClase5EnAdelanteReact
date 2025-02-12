@@ -1,16 +1,18 @@
+//Este componente será el encargado de mostrar la lista de publicaciones en la página de inicio. A partir de la lista de publicaciones que gestionamos con Context API, renderizamos el título y el extracto, y un enlace a la página de detalles de la publicación.
+
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { useBlog } from '../context/BlogContext';
 import { Box, Heading, Text, Button } from '@chakra-ui/react';
 
-const Home = () => {
-  const { posts } = useBlog();
+const PostList = () => {
+  const { posts } = useBlog(); // Obtiene las publicaciones del contexto
 
   return (
     <Box p={5}>
-      <Heading mb={4}>Blog</Heading>
+      <Heading mb={4}>Lista de Publicaciones</Heading>
       {posts.length === 0 ? (
-        <Text>No hay publicaciones aún.</Text>
+        <Text>No hay publicaciones disponibles.</Text>
       ) : (
         posts.map((post) => (
           <Box key={post.id} mb={4} p={4} borderWidth={1} borderRadius="md">
@@ -26,4 +28,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default PostList;
