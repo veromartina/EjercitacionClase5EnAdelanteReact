@@ -22,6 +22,8 @@ export default [
       react,
       'react-hooks': reactHooks,
       'react-refresh': reactRefresh,
+      'simple-import-sort': eslintPluginSimpleImportSort,
+
     },
     rules: {
       ...js.configs.recommended.rules,
