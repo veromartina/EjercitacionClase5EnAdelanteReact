@@ -22,6 +22,8 @@ export default [
       react,
       'react-hooks': reactHooks,
       'react-refresh': reactRefresh,
+      'simple-import-sort': eslintPluginSimpleImportSort,
+
     },
     rules: {
       ...js.configs.recommended.rules,
@@ -33,6 +35,9 @@ export default [
         'warn',
         { allowConstantExport: true },
       ],
+      "simple-import-sort/imports": "warn",
+      "simple-import-sort/exports": "warn"
+
     },
   },
 ]
